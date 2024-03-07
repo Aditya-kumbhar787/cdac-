@@ -1,0 +1,181 @@
+q1
+
+
+adityak@DESKTOP-8UUDCJV:~$ pwd
+/home/adityak
+adityak@DESKTOP-8UUDCJV:~$ ls
+Aditya  grandfather  mar24  rk
+adityak@DESKTOP-8UUDCJV:~$ mkdir LinuxAssigement
+adityak@DESKTOP-8UUDCJV:~$ cd LinuxAssigement
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ mkdir docs
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ ls
+docs
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ pwd
+/home/adityak/LinuxAssigement
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ cd docs
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ cp file1.txt docs/file2.txt
+cp: cannot stat 'file1.txt': No such file or directory
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ touch file1
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ ls
+file1
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ cp file1.txt docs/file2.txt
+cp: cannot stat 'file1.txt': No such file or directory
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ cp file1 docs/file2.txt
+cp: cannot create regular file 'docs/file2.txt': No such file or directory
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ cp file1 docs/file2
+cp: cannot create regular file 'docs/file2': No such file or directory
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ touch file1.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ ls
+file1  file1.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ cp file1.txt docs/file2.txt
+cp: cannot create regular file 'docs/file2.txt': No such file or directory
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ mkdir file3.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ cp file3.txt docs/file4.txt
+cp: -r not specified; omitting directory 'file3.txt'
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ cd ..
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ ls
+docs
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ cd docs
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ ls
+file1  file1.txt  file3.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ rm File1
+rm: cannot remove 'File1': No such file or directory
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ rm file1
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ rm file1.txt file3.txt
+rm: cannot remove 'file3.txt': Is a directory
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ rm file.txt
+rm: cannot remove 'file.txt': No such file or directory
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ rmdir file3.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ ls
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ vim file1.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ nano file1.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ touch file1.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ ls
+file1.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ cp file1.txt docs/file2.txt
+cp: cannot create regular file 'docs/file2.txt': No such file or directory
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ mkdir docs
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ cp file1.txt docs/file2.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ ls
+docs  file1.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ mv file1.txt
+mv: missing destination file operand after 'file1.txt'
+Try 'mv --help' for more information.
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ mv file1.txt file2.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ ls
+docs  file2.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ chmod -rwx file2.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ ls -l
+total 4
+drwxr-xr-x 2 adityak adityak 4096 Mar  7 18:14 docs
+---------- 1 adityak adityak    0 Mar  7 18:12 file2.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$  chmod 777 file2.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ ls -l
+total 4
+drwxr-xr-x 2 adityak adityak 4096 Mar  7 18:14 docs
+-rwxrwxrwx 1 adityak adityak    0 Mar  7 18:12 file2.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ chmod 774 file2.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ ls -l
+total 4
+drwxr-xr-x 2 adityak adityak 4096 Mar  7 18:14 docs
+-rwxrwxr-- 1 adityak adityak    0 Mar  7 18:12 file2.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ ls
+docs  file2.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ man
+What manual page do you want?
+For example, try 'man man'.
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ man man
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ ls/
+-bash: ls/: No such file or directory
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ ls /
+bin  boot  dev  etc  home  init  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ date +"%Y-%m-%d %H:%M:%S"
+2024-03-07 19:03:19
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ hostname --all-ip-addresses
+172.27.186.225
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ ping <remote_server_address>
+-bash: syntax error near unexpected token `newline'
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ ping
+ping: usage error: Destination address required
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ ping 127.0.0.1
+PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=14.0 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.049 ms
+64 bytes from 127.0.0.1: icmp_seq=3 ttl=64 time=0.074 ms
+64 bytes from 127.0.0.1: icmp_seq=4 ttl=64 time=0.122 ms
+64 bytes from 127.0.0.1: icmp_seq=5 ttl=64 time=0.047 ms
+64 bytes from 127.0.0.1: icmp_seq=6 ttl=64 time=0.032 ms
+64 bytes from 127.0.0.1: icmp_seq=7 ttl=64 time=0.043 ms
+64 bytes from 127.0.0.1: icmp_seq=8 ttl=64 time=0.051 ms
+64 bytes from 127.0.0.1: icmp_seq=9 ttl=64 time=0.083 ms
+64 bytes from 127.0.0.1: icmp_seq=10 ttl=64 time=0.028 ms
+^C
+--- 127.0.0.1 ping statistics ---
+10 packets transmitted, 10 received, 0% packet loss, time 9325ms
+rtt min/avg/max/mdev = 0.028/1.452/13.999/4.182 ms
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement/docs$ cd ..
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ zip -r docs1.zip docs
+Command 'zip' not found, but can be installed with:
+sudo apt install zip
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ sudo apt install zip
+[sudo] password for adityak:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  unzip
+The following NEW packages will be installed:
+  unzip zip
+0 upgraded, 2 newly installed, 0 to remove and 30 not upgraded.
+Need to get 350 kB of archives.
+After this operation, 930 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 unzip amd64 6.0-26ubuntu3.2 [175 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 zip amd64 3.0-12build2 [176 kB]
+Fetched 350 kB in 8s (42.7 kB/s)
+Selecting previously unselected package unzip.
+(Reading database ... 24217 files and directories currently installed.)
+Preparing to unpack .../unzip_6.0-26ubuntu3.2_amd64.deb ...
+Unpacking unzip (6.0-26ubuntu3.2) ...
+Selecting previously unselected package zip.
+Preparing to unpack .../zip_3.0-12build2_amd64.deb ...
+Unpacking zip (3.0-12build2) ...
+Setting up unzip (6.0-26ubuntu3.2) ...
+Setting up zip (3.0-12build2) ...
+Processing triggers for man-db (2.10.2-1) ...
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ zip -r docs1.zip docs
+  adding: docs/ (stored 0%)
+  adding: docs/file2.txt (stored 0%)
+  adding: docs/docs/ (stored 0%)
+  adding: docs/docs/file2.txt (stored 0%)
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ y
+y: command not found
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ ls
+docs  docs1.zip
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ mkdir newdr
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ unzip docs1.zip -d newder
+Archive:  docs1.zip
+   creating: newder/docs/
+ extracting: newder/docs/file2.txt
+   creating: newder/docs/docs/
+ extracting: newder/docs/docs/file2.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ ls
+docs  docs1.zip  newder  newdr
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ tree
+.
+├── docs
+│   ├── docs
+│   │   └── file2.txt
+│   └── file2.txt
+├── docs1.zip
+├── newder
+│   └── docs
+│       ├── docs
+│       │   └── file2.txt
+│       └── file2.txt
+└── newdr
+
+6 directories, 5 files
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ vim file2.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ sed -i 's/aditya/vinit/g' file2.txt
+adityak@DESKTOP-8UUDCJV:~/LinuxAssigement$ vi file2.txt
