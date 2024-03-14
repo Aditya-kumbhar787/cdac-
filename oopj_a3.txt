@@ -1,0 +1,96 @@
+package in.cdac.mumbai;
+
+public class Assignment3_1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int num1 = 10;		//Initialization
+		//double num2 = ( double ) num1;	//Initialization	//Widening
+		double num2 =  num1;	//Initialization	//Widening
+		System.out.println("Num1	:	"+num1);
+		System.out.println("Num2	:	"+num2);
+		// TODO Auto-generated method stub
+	}
+
+}
+out put
+Num1	:	10
+Num2	:	10.0
+-----------------------------------------------------------------------------------------------------------
+
+
+package in.cdac.mumbai;
+
+public class assignment3_2{
+	
+	public static void main(String[] args) {
+	double num1 = 5.5;
+	int num2 =  ( int )num1;
+	System.out.println("Num1	:	"+num1);
+	System.out.println("Num2	:	"+num2);
+
+}
+}
+
+output
+Num1	:	5.5
+Num2	:	5
+
+------------------------------------------------------------------------------------------------------------------
+
+package in.cdac.mumbai;
+
+public class assignment3_3{
+    public static void main(String[] args) {
+        int intValue = 5;
+        double doubleValue = 2.5;
+        float floatValue = 1.5f;
+
+        
+        double result1 = intValue + doubleValue; 
+        float result2 = intValue + floatValue;   
+        double result3 = doubleValue + floatValue;
+
+
+        System.out.println("Result of int + double: " + result1); 
+        System.out.println("Result of int + float: " + result2); 
+        System.out.println("Result of double + float: " + result3); 
+    }
+}
+output
+Result of int + double: 7.5
+Result of int + float: 6.5
+Result of double + float: 4.0
+------------------------------------------------------------------------------------------------------------------
+
+package in.cdac.mumbai;
+
+public class assignment3_4 {
+
+	public static void main(String[] args) {
+		//interger value
+		int num = 42;
+		
+		
+		double numDouble = num;
+		float numFloat = num;
+		boolean numBoolean = (num != 0);
+		String numString = Integer.toString(num);
+		
+		
+		
+		System.out.println("Integer value: " + num);
+		System.out.println("double value: " + numDouble);
+		System.out.println("float value: " + numFloat);
+		System.out.println("boolean value: " + numBoolean);
+		System.out.println("string value: " + numString);
+
+	}
+
+}
+output
+Integer value: 42
+double value: 42.0
+float value: 42.0
+boolean value: true
+string value: 42
